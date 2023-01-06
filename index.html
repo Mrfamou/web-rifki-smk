@@ -243,12 +243,13 @@
 		<input type="submit" name="submit" value="submit">
 	</form>
 
-	<?php
+		<?php
 	if ($_POST)
 	{
-		echo 'Nama: ' . $_POST['nama'];
-		echo '<br>: '
-		echo 'Email: ' . $_POST['email'];
+		echo '<pre>'; 
+		print_r($_GET);
+		print_r($_POST);
+		print_r($_REQUEST);
 	}
 	?>
             </div>

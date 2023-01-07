@@ -1,28 +1,16 @@
 <?php
+$servername = "localhost";
+$database = "b8_32431637_b8_32431637_server";
+$username = "b8_32431637";
+$password = "rifki126@";
 
-    $conn= mysql_connect("localhost","root","");
-      $db= mysql_select_db("abc",$conn);
-      
-//creAT CONECTION
-$connection = new mysqli($conn,$db);
-  
-  //check koneksi
-  if ($connection->connect_error){
-    die("connection failed: ".$connection->connect_error);
-  }
-//read all row fromdatabase table
-$sql = "SELECT * FROM `abc` WHERE 1";
-$result = connection->query($sql);
-
-//raech data of each row
-while($row =$result->fetch_assoc()) {
+// untuk tulisan bercetak tebal silakan sesuaikan dengan detail database Anda
+// membuat koneksi
+$conn = mysqli_connect($servername, $username, $password, $database);
+// mengecek koneksi
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
 }
-      
-      
-      
-     $name=     $_POST['Name'];
-     $name=     $_POST[Email];
-     $name=     $_POST[Pesan];
-
-
+echo "Koneksi berhasil";p
+mysqli_close($conn);
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-    $conn= mysql_connect("b8_32431637_server","Admin","rifki126@");
+    $conn= mysql_connect("localhost","root","");
       $db= mysql_select_db("abc",$conn);
       
 //creAT CONECTION
